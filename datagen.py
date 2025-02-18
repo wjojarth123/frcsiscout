@@ -16,7 +16,7 @@ class VideoAnnotator:
         self.drag_start = (0, 0)
         self.drag_end = (0, 0)
         self.class_colors = [(0, 255, 0), (0, 0, 255), (255, 0, 0), (0, 255, 255)]  # 4 classes
-        self.class_names = ["Class1", "Class2", "Class3", "Class4"]
+        self.class_names = ["Coral", "Algae", "Red", "Blue"]
         self.box_size = 30
         self.recent_bbox_index = -1  # Track most recent bounding box annotation
 
@@ -125,7 +125,7 @@ class VideoAnnotator:
             "Ctrl+Z: Undo | Q: Quit | R: Change to Class4"
         ]
         for i, text in enumerate(help_text):
-            y_offset = 30 + 30*i
+            y_offset = 30 + 30 * i
             cv2.putText(display_frame, text, (10, y_offset), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,0), 3)
             cv2.putText(display_frame, text, (10, y_offset), 
